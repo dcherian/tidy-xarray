@@ -1,53 +1,62 @@
 # Tidy xarray geospatial cubes
 
-```{note}
-just adding some filler text to this/other pages for now
-```
-This Jupyter Book accompanies the 2023 SciPy presentation `Tidy Geospatial Cubes`. Here you will find introductory material, information on how to access the example datasets used in the presentation and jupyter notebook examples of the dataset tidying steps and concepts we discuss in the presentation. 
+## Purpose
 
-brainstorming notes and draft google slides can be found [here](https://docs.google.com/presentation/d/1mDS_NWNyJBXVnehe5fQYZdHw4fQ1_j9DkqTLfPbpjvs/edit?usp=sharing)
+Array data that is represented by Xarray objects is often multivariate, multi-dimensional and very complex. Part of the beauty of Xarray as that it is adaptable and scalable to represent a large number of data structures. But this can also introduce difficulty (especially for learning users) arriving at a workable structure that will be suitable for your analytical needs. 
 
-## What is tidy data? 
+This project is motivated by community sentiment and experiences that oftentimes, the hardest part of learning and teaching Xarray is teaching users how best to use Xarray conceptually. 
 
-The concept of [tidy data](https://vita.had.co.nz/papers/tidy-data.pdf) was developed by Hadley Wickham for the R programming language, and is a set of principles to guide facilitating tabular data for analysis. 
+In this section, we discuss common characteristics of gridded datasets and what 'tidy' data looks like and means in this context. 
 
-## Why do we need it for gridded geospatial data?
+## A brief primer on tidy data
 
-- copy here from slideshow and expand:
-### Geospatial datasets are large, complex and can be cumbersome to work with, especially for people learning python / xarray. 
-- Community sentiment (AGU convos, Tim Crone Pangeo showcase 2/15) that the hardest part of learning to use xarray is conceptualizing xarray structures and how to coerce your data into them 
-  - What are coordinates, dimensions, variables? How do they all inter-relate?
-  - How to structure your data within the xarray framework
-  - How to store metadata 
-  - Others? 
-  - Some info about dataset size, complexity, maybe a schematic
+Tidy data was developed by Hadley Wickham for tabular datasets in the R programming language. There are great resources that comprehensively explain this concept and the ecosystem of tools built upon it. Below is a very brief explanation:
 
+**Data tidying** is the process of structuring datasets to facilitate analysis. Wickham writes: "...tidy datasets are all alike but every messy dataset is messy in its own way. Tidy datasets provide a standardized way to link the structure of a dataset (its physical layout) with its semantics (its meaning)" (Wickham, 2014). 
 
-## Examples of tidying data
+### Tidy data principles for tabular datasets
 
-### 1. [Harmonized Landsat sentinel](tidy_hls.ipynb)
+Wickham defines 3 core principles of tidy data for tabular principles. They are:
 
-### 2. [Aquarius](tidy-xarray.ipynb)
+1. Each variable forms an observation
+2. Each observation forms a row
+3. Each type of observational unit forms a table
 
-### 3. [ITS_LIVE](tidy_itslive.ipynb)
-
-## Common 'tidying' steps for geospatial raster data
-
-1. data is normally stored such that individual observations or time-steps are organized as individual files. To construct a usable 'data cube' one will need to read and organize many files
-2. individual file names will often contain important metadata that needs to be used for indexing and selection later -- how to store it?
-
-### How to know if something should be a dimension, coordinate or data variable? 
-
-Complicated, but when in doubt, good rule is:  
+**Our goal is to imagine what 'tidy data' would look like for gridded datasets**
 
 
-    1. dimensional coordinates (ie. `dims`) should be `(x,y,time)`  
-    2. non-dimensional coordinates (`coords`) should be anything that provides information about the independent data you are hoping to observe, but might not be fundamental to the shape/structure of your 'data cube'. Examples could be: imaging mode, polarization, temporal baseline. Often times, this information will be stored in the original filename, or potentially as an attribute. If it is something you might want to use for indexing or selection down the line, it is best to store that information as a non-dimensional coord.   
-    3. Independent data variables (observables such as temperature, salinity, magnitude of velocity, reflectance, backscatter ...) should be stored as `data_vars`.
+## Common use-case: individual observations to a x-y-time datacube
 
-## What are the core concepts of tidy geospatial data cubes? 
+Data downloaded or accessed from DAACs and other providers is often (for good reason) separated into temporal observations or spatial subsets. This minimizes the services that must be provided for different datasets and allows the user to access just the material that they need. However, most workflows will involve some sort of spatial and/or temporal investigation of an observable, which will usually require the analyst to arrange individual files into spatial mosaics and/or temporal cubes. In addition to being a source of duplicated effort and work, these steps also introduce decision-points that can be stumbling blocks for newer users. We hope a tidy framework for xarray will streamline the process of preparing data for analysis by providing specific expectations of what 'tidied' datasets look like as well as common patterns and tools to use to arrive at a tidy state. 
 
+## Tidy data principles for Xarray data structures
 
-## Caveats and issues
+These are guidelines to keep in mind while you are organizing your data. To see the examples that were used to develop these principles, go [here]. 
 
-- what if there is 'contextual' info or metadata that you'd like to be able to index and select on, but there are duplicate values? eg. elevation, or coverage % -- best to keep those as vars?     
+**1. Dimensions** 
+- Minimize the number of dimensional coordinates
+
+**2. Coordinates**
+- Non-dimensional coordinates can be numerous. Each should exist along one or multiple dimensions
+
+**3. Data Variables**
+- Data variables should be observables rather than contextual. Each should exist along one or multiple dimensions.
+
+**4. Contextual information (metadata)**
+- Metadata should only be stored as an attribute if it is static along the dimensions to which it is applied.
+- If metadata is dynamic, it should be stored as a coordinate variable.
+
+**5. Variable, attribute naming**
+- **Wherever possible, use cf-conventions for naming**
+- Variable names should be descriptive
+- VAriable names should not contain information that belongs in a dimension or coordinate (ie. information stored in a variable name should be reduced to only the observable the variable describes.
+
+**6. Make us of & work within the framework of other tools**
+- Tools like STAC, open data cube, cf.xarray, pystac, stackstac (and more) make tidying possible and smoother, especially with large, cloud-optimized datasets.
+
+## Other guidelines and rules of thumb
+
+- Avoid storing important data in filenames
+- None-descriptiev variable names can create + perpetuate confusion
+- Missing coordinate information makes datasets harder to use
+- Elements of a dataset's 'shape'/structure can sometimes be embedded in variable names; this will complicate subsequent analysis

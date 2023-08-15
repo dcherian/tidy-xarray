@@ -1,7 +1,7 @@
 # tidy-xarray
 
-Authors: Emma Marshall. Deepak Cherian, Scott Henderson
-This is a project aiming to define a `tidy` definition for array datasets represented by Xarray data structures. Currently, we focus on geospatial use-cases and remote sensing datasets. We welcome community contributions, specifically from those working with model output datasets. 
+Authors: Emma Marshall. Deepak Cherian, Scott Henderson  
+This is a project aiming to define a `tidy` framework for array datasets represented by Xarray data structures. Currently, we focus on geospatial use-cases and remote sensing datasets. We welcome community contributions, specifically from those working with model output datasets. 
 
 ## What is tidy data?
 

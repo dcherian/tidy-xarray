@@ -1,4 +1,4 @@
-# Tidy xarray geospatial cubes
+# Introduction
 
 ## Purpose
 

@@ -5,11 +5,11 @@ This is a project aiming to define a `tidy` framework for array datasets represe
 
 ## What is tidy data?
 
-Tidy data is a concept defined by Hadley Wickham for tabular datasets in the R programming language. 
+[Tidy data](https://vita.had.co.nz/papers/tidy-data.pdf) is a concept defined by Hadley Wickham for tabular datasets in the R programming language. 
 
 ### Tidy data resources 
 
-(add)
+[https://r4ds.had.co.nz/tidy-data.html](https://r4ds.had.co.nz/tidy-data.html)
 
 ## What are datacubes?
 

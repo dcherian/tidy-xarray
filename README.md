@@ -13,8 +13,6 @@ Much of this work was the subject of a presentation at the 2023 SciPy Conference
 
 1. [R for Data Science chapter on Tidy data](https://r4ds.hadley.nz/data-tidy.html)
 
-
-
 ## What are datacubes?
 
 There are very helpful resources that conceptualize datacube representations of data. We highly recommend [this](https://openeo.org/documentation/1.0/datacubes.html#what-are-datacubes) page by openEO on datacubes for a comprehensive explanation of datacube characteristics and general computation patterns. 

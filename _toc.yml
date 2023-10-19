@@ -4,6 +4,10 @@
 format: jb-book
 root: intro.md
 chapters:
-- file: tidy-xarray.ipynb
-- file: tidy_hls.ipynb
-- file: tidy_itslive.ipynb
+- file: examples.md
+    sections:
+    - file: tidy_aquarius.ipynb
+    - file: tidy_xarray.ipynb
+    - file: tidy_hls.ipynb
+    - file: tidy_itslive.ipynb
+- file: scipy_talk.md

@@ -25,14 +25,4 @@ As listed above, many great resources define and explain working with geospatial
 
 ## Contributing
 
-We would love your help and engagement on this project! If you have a dataset that you've worked with that felt particularly messy, or one that has steps you find yourself thinking back to as you work with new datasets, consider submitting it as an example! If you have input on tidy principles, please feel free to raise an issue. 
-<<<<<<< HEAD
-=======
-
-
-
-## Contributing
-
-We would love your help and engagement on this project! If you have a dataset that you've worked with that felt particularly messy or one that has steps you find yourself thinking back to as you work with new datasets, consider submitting it as an example! If you have input on tidy principles, please feel free to raise an issue. 
->>>>>>> ff49fa4e7926932de8357febdd399d695956367a
-
+We would love your help and engagement on this project! If you have a dataset that you've worked with that felt particularly messy, or one with steps you find yourself thinking back to as you work with new datasets, consider submitting it as an example! If you have input on tidy principles, please feel free to raise an issue. 

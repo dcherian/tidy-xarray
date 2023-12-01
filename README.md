@@ -1,7 +1,8 @@
 # tidy-xarray
 
-Authors: Emma Marshall. Deepak Cherian, Scott Henderson  
-This is a project aiming to define a `tidy` framework for array datasets represented by Xarray data structures. Currently, we focus on geospatial use-cases and remote sensing datasets. We welcome community contributions, specifically from those working with model output datasets. 
+Authors: Emma Marshall, Deepak Cherian, Scott Henderson  
+
+This project aims to define a `tidy` framework for array datasets represented by Xarray data structures. Currently, we focus on geospatial use cases and remote sensing datasets. We welcome community contributions, and would be particularly excited to connect with users of model output datasets interested in tidy principles. 
 
 Much of this work was the subject of a presentation at the 2023 SciPy Conference. The slides can be found in the [Proceedings of the 22nd Python in Science Conference](https://conference.scipy.org/proceedings/scipy2023/slides.html).
 
@@ -12,6 +13,7 @@ Much of this work was the subject of a presentation at the 2023 SciPy Conference
 ### Tidy data resources 
 
 1. [R for Data Science chapter on Tidy data](https://r4ds.hadley.nz/data-tidy.html)
+2. [Tidy data, Journal of Statistical Software](https://vita.had.co.nz/papers/tidy-data.pdf)
 
 ## What are datacubes?
 
@@ -20,6 +22,12 @@ There are very helpful resources that conceptualize datacube representations of 
 ## What do we hope to do? 
 
 As listed above, many great resources define and explain working with geospatial array data. Our goal isn't to recreate the wheel but to define specific guidelines for formatting Xarray data structures in ways that will simplify analytical workflows. You can find a condensed version of this material in the [Xarray Tutorial section on data tidying](comingsoon). In this repository, you will find descriptions and explanations of `tidy` principles for Xarray data objects as well as examples of 'untidy' datasets and step-by-step explanations of the process of 'tidying' them. 
+
+## Contributing
+
+We would love your help and engagement on this project! If you have a dataset that you've worked with that felt particularly messy, or one that has steps you find yourself thinking back to as you work with new datasets, consider submitting it as an example! If you have input on tidy principles, please feel free to raise an issue. 
+
+
 
 ## Contributing
 

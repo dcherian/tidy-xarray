@@ -7,6 +7,7 @@ Much of this work was the subject of a presentation at the 2023 SciPy Conference
 
 ## What is tidy data?
 
+<<<<<<< HEAD
 [Tidy data](https://vita.had.co.nz/papers/tidy-data.pdf) is a concept defined by Hadley Wickham for tabular datasets in the R programming language. Tidy data focuses on the workflow steps of preparing a dataset for analysis and doing so in a way that simplifies rather than complicates further analysis. Wickham defines 'tidying' as "structuring datasets to facilitate analysis" such that the structure of a dataset reflects its semantics (Wickham, 2014). 
 
 ### Tidy data resources 
@@ -14,6 +15,13 @@ Much of this work was the subject of a presentation at the 2023 SciPy Conference
 1. [R for Data Science chapter on Tidy data](https://r4ds.hadley.nz/data-tidy.html)
 
 
+=======
+[Tidy data](https://vita.had.co.nz/papers/tidy-data.pdf) is a concept defined by Hadley Wickham for tabular datasets in the R programming language. 
+
+### Tidy data resources 
+
+[https://r4ds.had.co.nz/tidy-data.html](https://r4ds.had.co.nz/tidy-data.html)
+>>>>>>> a26c58a90f0fbcff9d90e97f2df901370eb02d06
 
 ## What are datacubes?
 

@@ -2,12 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro.md
+root: intro
 chapters:
 - file: examples.md
-    sections:
-    - file: tidy_aquarius.ipynb
-    - file: tidy_xarray.ipynb
-    - file: tidy_hls.ipynb
-    - file: tidy_itslive.ipynb
+- file: contributing.md
 - file: scipy_talk.md
+

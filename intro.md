@@ -4,8 +4,6 @@ Array data that are represented by Xarray objects are often multivariate, multi-
 
 This project is motivated by community sentiment and experiences that oftentimes, the hardest part of learning and teaching Xarray is teaching users how best to use Xarray conceptually. We hope to leverage the experiences of Xarray and geospatial data users to arrive at a unifying definition of 'tidy' data in this context and best-practices for 'tidying' geospatial raster data represented by Xarray objects. 
 
-In this section, we discuss common characteristics of gridded datasets and what 'tidy' data looks like and means in these settings. 
-
 ## A brief primer on tidy data
 
 Tidy data was developed by Hadley Wickham for tabular datasets in the R programming language. There are great resources that comprehensively explain this concept and the ecosystem of tools built upon it. Below is a very brief explanation:
@@ -13,6 +11,11 @@ Tidy data was developed by Hadley Wickham for tabular datasets in the R programm
 **Data tidying** is the process of structuring datasets to facilitate analysis. Wickham writes: "...tidy datasets are all alike but every messy dataset is messy in its own way. Tidy datasets provide a standardized way to link the structure of a dataset (its physical layout) with its semantics (its meaning)" (Wickham, 2014). 
 
 ### Tidy data principles for tabular datasets
+The concept of [tidy data](https://vita.had.co.nz/papers/tidy-data.pdf) was developed by Hadley Wickham in the R programming language, and is a set of principles to guide facilitating tabular data for analysis. 
+
+```
+"Tidy datasets are all alike but every messy dataset is messy in its own way." - Wickham, 2014
+```
 
 Wickham defines three core principles of tidy data for tabular principles. They are:
 
@@ -20,7 +23,7 @@ Wickham defines three core principles of tidy data for tabular principles. They 
 2. Each observation forms a row
 3. Each type of observational unit forms a table
 
-## We want to imagine what 'tidy data' could look like for gridded datasets
+## Imagining a 'tidy data' framework for gridded datasets
 
 ### Common use-case: Manipulating individual observations to an x-y-time datacube
 
@@ -54,12 +57,16 @@ These are guidelines to keep in mind while you are organizing your data. To see 
 ## Other guidelines and rules of thumb
 
 - Avoid storing important data in filenames
-- None-descriptiev variable names can create + perpetuate confusion
+- Non-descriptive variable names can create + perpetuate confusion
 - Missing coordinate information makes datasets harder to use
 - Elements of a dataset's 'shape'/structure can sometimes be embedded in variable names; this will complicate subsequent analysis
 
 ## Contributing
 
+<<<<<<< HEAD
+This project is an evolving community effort. **we want to hear from you!**. If reading this description and examples reminded you of your own experiences tidying datasets to prepare them for analysis, please consider submitting an example to our [data tidying gallery](insert page here). Your experience could help other users! 
+=======
 This is an evolving community effort + project, **we want to hear from you!**. If reading this description and examples reminded you of your own experiences tidying datasets to prepare them for analysis, please consider submitting an example to our [data tidying gallery](insert page here). Your experience could help other users! 
 
 
+>>>>>>> 5daa77fb078b086af03ab58377ab765295297ffc

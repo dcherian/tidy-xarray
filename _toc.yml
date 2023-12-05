@@ -2,8 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro.md
+root: intro
 chapters:
-- file: tidy-xarray.ipynb
-- file: tidy_hls.ipynb
-- file: tidy_itslive.ipynb
+- file: examples.md
+- file: contributing.md
+- file: scipy_talk.md
+

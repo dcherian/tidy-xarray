@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Tidy Geospatial Datacubes (tidy xarray)
+title: Tidy Geospatial Datacubes 
 author: Emma Marshall, Scott Henderson, Deepak Cherian
 #logo: logo.png
 
